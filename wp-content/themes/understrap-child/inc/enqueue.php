@@ -33,3 +33,18 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'understrap_scripts' );
 
+//masonry
+function bps_masonry () {
+	wp_enqueue_script('masonry-js', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array('jquery'));
+	wp_enqueue_script('masonry-init', get_stylesheet_directory_uri() . '/js/masonry-init.js', array('masonry'), 1, true); 
+	}
+	
+	add_action( 'wp_enqueue_scripts', 'bps_masonry' );
+
+//Isotope
+
+function isotope_plugin() {
+	wp_enqueue_script('isotope', 'https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js');
+}
+
+add_action( 'wp_enqueue_scripts', 'isotope_plugin' );

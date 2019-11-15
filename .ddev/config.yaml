@@ -1,5 +1,5 @@
 APIVersion: v1.11.1
-name: ATGDESIGN
+name: ATVDESIGN
 type: wordpress
 docroot: ""
 php_version: "7.2"
