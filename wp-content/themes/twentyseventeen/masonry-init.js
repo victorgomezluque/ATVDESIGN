@@ -1,5 +1,5 @@
 jQuery(window).load(function () {
-	jQuery('').masonry({
+	jQuery('.vc_column-inner').masonry({
 
 
     });

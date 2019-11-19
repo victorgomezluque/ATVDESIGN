@@ -116,6 +116,7 @@ function twentyseventeen_setup() {
 	 * specifically font, colors, and column width.
 	  */
 	add_editor_style( array( 'assets/css/editor-style.css', twentyseventeen_fonts_url() ) );
+	
 
 	// Load regular editor styles into the new block-based editor.
 	add_theme_support( 'editor-styles' );
@@ -436,7 +437,7 @@ function twentyseventeen_colors_css_wrap() {
 	</style>
 	<?php
 }
-add_action( 'wp_head', 'twentyseventeen_colors_css_wrap' );
+
 
 /**
  * Enqueues scripts and styles.
@@ -463,7 +464,8 @@ function twentyseventeen_scripts() {
 	}
 
 	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'twentyseventeen-style' ), '1.0' );
+	wp_enqueue_style( 'twentyseventeen-ie8', get_theme_file_uri( '/scss/css/style.css' ), array( 'twentyseventeen-style' ), '1.0' );
+	
 	wp_style_add_data( 'twentyseventeen-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the html5 shiv.
