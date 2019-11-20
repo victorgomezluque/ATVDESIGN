@@ -6,14 +6,14 @@
  */
 
 /** Authentication Unique Keys and Salts. */
-define('AUTH_KEY',         'rcwwyYnBZAGCtwSyePJcdRRBbYvftpaYpFVAPQdNPUmHmnVvTVPmQKqCRFKFKeqA');
-define('SECURE_AUTH_KEY',  'wXNZiFZeFyxtSVnHpNqKnHIEzRJlkFjeWhaCGsLXFwcLlIeXzmwhEKfZgyncmsbQ');
-define('LOGGED_IN_KEY',    'nMLblqmbtTgnmxngjBgKceiuTwOLMLqCQPZKmEZdZWvDjCxsvoiDKKumfOUMrkiL');
-define('NONCE_KEY',        'zdauSgnuTJAPXmNuyITiYHtWXbIfQhkXBIwtstYUJwYgwrrNDZCUqvmrJIKJbGVP');
-define('AUTH_SALT',        'EgCEAcrvYteHpbqyXWZbLubpYvUNJmgnACVXgopGoxxoGROvsKKOuUyoBodLtTNm');
-define('SECURE_AUTH_SALT', 'lsLUpmXrOkEMpjjLcYhGWHmxvVTCHhlEgaKezduQHLfTpQcGpiYeJNlsYzrbjxVP');
-define('LOGGED_IN_SALT',   'VGawNPYRiUKDqgxVaenarkFbgIkCtmINQCtrGmmRQBveFIDXsrIdqvJdpkkhOOTb');
-define('NONCE_SALT',       'aaFujUtbAuDsnVwFzebZKhySNqmtdFyIWnIHwsVaWGeTrbGsqjyXLXMRXRhxXfmB');
+define('AUTH_KEY',         'GWEQvcZMYBxpFpoyQAGESZPqNNgVjBjKaSWpmgfvjpEpfWudrXFyHlHXnfPenvTO');
+define('SECURE_AUTH_KEY',  'JpuGIHOjhLZeKjpfRxAKUEtJDKJifpVgaOHuohDnbOSLRQydxmciuqnExKATHiZs');
+define('LOGGED_IN_KEY',    'UNijYpNRrIRljBGMkEZQdQRhkKGTkHSlAYGRExaOBicKoKJWiIWzbxSqoMhlZUNj');
+define('NONCE_KEY',        'vYDqLNeiyuyqoxJKMzcAiKNmNlyWeDUHmjluTMRTjbrPtYsfpwllvsPYuTHryLkN');
+define('AUTH_SALT',        'bMxJtAvNStDHjWAnNHLLovcbpPXFSCBtdutrQOqgLTEfRYbOdgUzzVYFEFkhHHup');
+define('SECURE_AUTH_SALT', 'ASHLvHDxCpbCcSquMHbWAjqZhAczuQokSXRHEJUkvIhmcVgfVncWYlymfHycnNGI');
+define('LOGGED_IN_SALT',   'QNsDQhinVMnGWMmvyHYFqBdyjezkurVoXqtcBjtqwIawmFFfAPxbhcayuVmpcmCb');
+define('NONCE_SALT',       'zdltDrdRKPDgLNEpINKcMaugJhmxIuAMegkHZquDDcpzLhQFHERIRhwMYyAqsNAm');
 
 /** Absolute path to the WordPress directory. */
 define('ABSPATH', dirname(__FILE__) . '/');

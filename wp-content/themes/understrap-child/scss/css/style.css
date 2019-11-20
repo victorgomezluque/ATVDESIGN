@@ -8,38 +8,41 @@ body {
 	background-size: cover;
 }
 
-.wp-block-gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-}
-
+/*Estructura de todas las paginas*/
 
 .navbar {
 	background-color: rgba(71, 161, 43, 0.7) !important;
-	
 	font-size: 20px;
-
 	position: sticky;
 	top: 0px;
 }
 
+
+
 #navbarNavDropdown ul li a {
 	color: black;
+	
 }
 
 
-.RedesSociales {
-	width: 100px;
-	height: 100px;
-	margin-top: 100%;
+.vc_custom_1574241025904 {
+	background-color: transparent !important;
+	
+
+}
+.vc_row{
+	margin-left: 10%;
 }
 
-.Descipcion {
-	background-color: rgba(255, 255, 255, 0.7);
-	margin-top: 100%;
+.vc_custom_1574241025904 img {
+	width: 200px;
+	height: 200px;
+
+}
 
 
+/* footer*/
+
+#wrapper-footer-full{
+	background-color: black !important;
 }

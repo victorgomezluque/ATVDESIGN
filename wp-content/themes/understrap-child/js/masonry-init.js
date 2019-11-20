@@ -1,5 +1,5 @@
 jQuery(window).load(function () {
-	jQuery('').masonry({
+	jQuery('.wrapper').masonry({
 
 
     });
