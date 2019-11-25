@@ -34,9 +34,9 @@ $container = get_theme_mod('understrap_container_type');
 				<main class="site-main" id="main">
 
 					<div class="button-group filter-button-group">
-						<button onclick="myFunction()" data-filter="*">show all</button>
-						<button onclick="myFunction()" data-filter=".animales">animales</button>
-						<button data-filter=".comida">comida</button>
+						<button data-filter="*">show all</button>
+						<button data-filter=".animales" onclick="myfunction()">animales</button>
+						<button data-filter=" .comida">comida</button>
 						<button data-filter=".joya">joya</button>
 					</div>
 					<div id="sorts" class="button-group">
@@ -48,10 +48,46 @@ $container = get_theme_mod('understrap_container_type');
 					<div id="demo"></div>
 
 
+					<div class="grid" data-masonry='{"itemSelector": ".grid-item" }'>
+					<?php
+						$args = array(
+							'post_status' => 'all',
+							'post_type' => 'foto',
+							'cat' => '5'
+
+						);
 
 
 
-					<div class="grid" data-masonry='{ "columnWidth": 1, "itemSelector": ".grid-item" }'>
+
+						$category_posts = new WP_Query($args);
+
+
+						if ($category_posts->have_posts()) :
+							while ($category_posts->have_posts()) :
+								$category_posts->the_post()
+
+
+								?>
+								<div class='grid-item animales' data-filter="animales">
+
+
+
+
+
+									<?php echo get_the_ID(); ?>
+									<?php the_post_thumbnail('full') //Esto sirve para mostrar imagenes Destacadas
+											?>
+
+								</div>
+							<?php
+								endwhile;
+							else :
+								?>
+							Vaya, no hay entradas.
+						<?php
+						endif;
+						?>
 
 						<?php
 						$args = array(
@@ -96,45 +132,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php
 						endif;
 						?>
-						<?php
-						$args = array(
-							'post_status' => 'all',
-							'post_type' => 'foto',
-							'cat' => '5'
-
-						);
-
-
-
-
-						$category_posts = new WP_Query($args);
-
-
-						if ($category_posts->have_posts()) :
-							while ($category_posts->have_posts()) :
-								$category_posts->the_post()
-
-
-								?>
-								<div class='grid-item Animal' data-filter="animales">
-
-
-
-
-
-									<?php echo get_the_ID(); ?>
-									<?php the_post_thumbnail('full') //Esto sirve para mostrar imagenes Destacadas
-											?>
-
-								</div>
-							<?php
-								endwhile;
-							else :
-								?>
-							Vaya, no hay entradas.
-						<?php
-						endif;
-						?>
+						
 					</div>
 
 
