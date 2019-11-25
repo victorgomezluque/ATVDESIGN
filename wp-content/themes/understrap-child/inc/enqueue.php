@@ -46,5 +46,4 @@ function bps_masonry () {
 function isotope_plugin() {
 	wp_enqueue_script('isotope', 'https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js');
 }
-
 add_action( 'wp_enqueue_scripts', 'isotope_plugin' );

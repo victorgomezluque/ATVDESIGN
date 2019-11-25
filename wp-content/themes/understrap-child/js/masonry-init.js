@@ -1,5 +1,6 @@
 jQuery(window).load(function () {
-	jQuery('.wrapper').masonry({
+	jQuery('.grid').masonry({
+        itemSelector: '.grid-item'
 
 
     });

@@ -11,7 +11,7 @@ body {
 /*Estructura de todas las paginas*/
 
 .navbar {
-	background-color: rgba(71, 161, 43, 0.7) !important;
+	background-color: rgba(108, 97, 97, 0.7) !important;
 	font-size: 20px;
 	position: sticky;
 	top: 0px;
@@ -21,16 +21,17 @@ body {
 
 #navbarNavDropdown ul li a {
 	color: black;
-	
+	float: left;
 }
 
 
 .vc_custom_1574241025904 {
 	background-color: transparent !important;
-	
+
 
 }
-.vc_row{
+
+.vc_row {
 	margin-left: 10%;
 }
 
@@ -43,6 +44,25 @@ body {
 
 /* footer*/
 
-#wrapper-footer-full{
+#wrapper-footer-full {
 	background-color: black !important;
+}
+
+
+
+/*Paginas todas las imagenes*/
+
+.tituloTodas {
+	color: white;
+	font-family: Times New Roman, Times, serif;
+}
+
+
+
+
+
+
+
+.grid-item--width2 {
+	width: 50%;
 }
