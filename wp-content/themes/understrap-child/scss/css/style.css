@@ -8,6 +8,11 @@ body {
 	background-size: cover;
 }
 
+/*Sticky header*/
+#wrapper-navbar{
+	position: sticky;
+	top: 0;
+}
 /*Estructura de todas las paginas*/
 
 .navbar {
@@ -31,15 +36,6 @@ body {
 
 }
 
-.vc_row {
-	margin-left: 10%;
-}
-
-.vc_custom_1574241025904 img {
-	width: 200px;
-	height: 200px;
-
-}
 
 
 /* footer*/
@@ -57,12 +53,43 @@ body {
 	font-family: Times New Roman, Times, serif;
 }
 
-
-
-
-
-
-
-.grid-item--width2 {
-	width: 50%;
+.grid{
+	width: 100%;
 }
+
+.id,.numatl{
+color: transparent;
+}
+
+
+
+
+
+
+/*Botones*/
+
+
+.button,.buttonAll{
+	margin: 10px;
+	background-color: #fc0 ;
+	color: black;
+	border-color: #fc0;
+	padding: 1%;
+	font-family: 'GeoBrandBold';
+	text-transform: uppercase;
+}
+
+.button:hover{
+	background-color: black;
+	border-color: black;
+	color: white;
+	transition: width 2s;
+}
+
+.is-checked{
+	background-color: black;
+	border-color: black;
+	color: white;
+	transition: width 2s;
+}
+

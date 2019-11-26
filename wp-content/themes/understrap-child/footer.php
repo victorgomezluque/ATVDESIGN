@@ -49,22 +49,62 @@ $container = get_theme_mod('understrap_container_type');
 
 
 <script>
-	function myfunction() {
-		jQuery.noConflict();
-		jQuery(document).ready(function() {
+	jQuery('#sorts').on(function() {
+		var sortByValue = jQuery(this).attr('data-sort-by');
 
-				var $g = jQuery('.grid').isotope({
-					itemSelector: '.grid-item',
-					layoutMode: 'fitRows'
-				});
-				$g.isotope({
-					filter: '.animales'
+		$g.isotope({
+			sortBy: sortByValue
 
-				});
-			});
-		}
+		});
+	});
 
+	jQuery.noConflict();
+	jQuery(document).ready(function() {
+
+		var $g = jQuery('.grid').isotope({
+			itemSelector: '.grid-item',
+			layoutMode: 'fitRows',
+			getSortData: {
+				numatl: '.numatl',
+				id: '.id',
+				weight: function(itemElem) {
+					var weight = jQuery(itemElem).find('.weight').text();
+					return parseFloat(weight.replace(/[\(\)]/g, ''));
+				}
+			}
+		});
+
+		
+		jQuery('#filters').on('click', '.button', function() {
 			
+			var filterValue = jQuery(this).attr('data-filter');
+			$g.isotope({
+
+				filter: filterValue
+
+			});
+			
+		});
+
+
+
+		jQuery('#sorts').on('click', '.button', function() {
+			var sortByValue = jQuery(this).attr('data-sort-by');
+
+			$g.isotope({
+				sortBy: sortByValue
+
+			});
+		});
+	});
+
+	jQuery('.button-group').each(function(i, buttonGroup) {
+		var $buttonGroup = jQuery(buttonGroup);
+		$buttonGroup.on('click', 'button', function() {
+			$buttonGroup.find('.is-checked').removeClass('is-checked');
+			jQuery(this).addClass('is-checked');
+		});
+	});
 </script>
 <?php wp_footer(); ?>
 

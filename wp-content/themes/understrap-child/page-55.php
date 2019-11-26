@@ -33,23 +33,61 @@ $container = get_theme_mod('understrap_container_type');
 
 				<main class="site-main" id="main">
 
-					<div class="button-group filter-button-group">
-						<button data-filter="*">show all</button>
-						<button data-filter=".animales" onclick="myfunction()">animales</button>
-						<button data-filter=" .comida">comida</button>
-						<button data-filter=".joya">joya</button>
+					<div id="filters" class="button-group filter-button-group">
+						<button class="button is-checked" data-filter="*">show all</button>
+						<button class="button" data-filter=".animal">animales</button>
+						<button class="button" data-filter=".comida">comida</button>
+						<button class="button" data-filter=".joya"> joya</button>
 					</div>
 					<div id="sorts" class="button-group">
-						<button class="button is-checked" data-sort-by="original-order">original order</button>
-						<button class="button" data-sort-by=".id">ordenar</button>
+						<button class="button is-checked" data-sort-by="numatl">original order</button>
+						<button class="button" data-sort-by="id">ordenar id</button>
 
 					</div>
 
 					<div id="demo"></div>
 
 
-					<div class="grid" data-masonry='{"itemSelector": ".grid-item" }'>
-					<?php
+				<div class="grid">
+				
+				<?php
+						$args = array(
+							'post_status' => 'all',
+							'post_type' => 'foto',
+							'cat' => '3'
+
+						);
+
+
+
+
+						$category_posts = new WP_Query($args);
+						
+
+						if ($category_posts->have_posts()) :
+							while ($category_posts->have_posts()) :
+								$category_posts->the_post();
+
+
+								$slug = get_post_field('post_name');
+								?>
+
+							
+								<div class='grid-item joya' data-filter="joya">
+									
+									<?php the_post_thumbnail('medium') ?>
+
+								</div>
+							<?php
+								endwhile;
+							else :
+								?>
+							Vaya, no hay entradas.
+						<?php
+						endif;
+						?>
+
+<?php
 						$args = array(
 							'post_status' => 'all',
 							'post_type' => 'foto',
@@ -61,23 +99,20 @@ $container = get_theme_mod('understrap_container_type');
 
 
 						$category_posts = new WP_Query($args);
-
+						
 
 						if ($category_posts->have_posts()) :
 							while ($category_posts->have_posts()) :
-								$category_posts->the_post()
+								$category_posts->the_post();
 
 
+								$slug = get_post_field('post_name');
 								?>
-								<div class='grid-item animales' data-filter="animales">
 
-
-
-
-
-									<?php echo get_the_ID(); ?>
-									<?php the_post_thumbnail('full') //Esto sirve para mostrar imagenes Destacadas
-											?>
+							
+								<div class='grid-item animal' data-filter="animal">
+									
+									<?php the_post_thumbnail('medium') ?>
 
 								</div>
 							<?php
@@ -89,11 +124,11 @@ $container = get_theme_mod('understrap_container_type');
 						endif;
 						?>
 
-						<?php
+<?php
 						$args = array(
 							'post_status' => 'all',
 							'post_type' => 'foto',
-							'cat' => '3,4'
+							'cat' => '4'
 
 						);
 
@@ -101,27 +136,20 @@ $container = get_theme_mod('understrap_container_type');
 
 
 						$category_posts = new WP_Query($args);
-
+						
 
 						if ($category_posts->have_posts()) :
 							while ($category_posts->have_posts()) :
-								$category_posts->the_post()
+								$category_posts->the_post();
 
 
+								$slug = get_post_field('post_name');
 								?>
-								<div class="grid-item  <?php echo get_the_ID() ?>">
 
-
-
-
-
-									<?php //Esto sirve para mostrar imagenes Destacadas
-											?>
-									<?php echo 	get_the_ID();
-											get_the_category();
-											?>
-									<?php the_post_thumbnail('full') //Esto sirve para mostrar imagenes Destacadas
-											?>
+							
+								<div class='grid-item comida' data-filter="comida">
+									
+									<?php the_post_thumbnail('medium') ?>
 
 								</div>
 							<?php
@@ -132,6 +160,7 @@ $container = get_theme_mod('understrap_container_type');
 						<?php
 						endif;
 						?>
+
 						
 					</div>
 
