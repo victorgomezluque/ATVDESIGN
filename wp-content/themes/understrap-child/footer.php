@@ -49,16 +49,10 @@ $container = get_theme_mod('understrap_container_type');
 
 
 <script>
-	jQuery('#sorts').on(function() {
-		var sortByValue = jQuery(this).attr('data-sort-by');
 
-		$g.isotope({
-			sortBy: sortByValue
-
-		});
-	});
 
 	jQuery.noConflict();
+
 	jQuery(document).ready(function() {
 
 		var $g = jQuery('.grid').isotope({
@@ -73,24 +67,28 @@ $container = get_theme_mod('understrap_container_type');
 				}
 			}
 		});
-
+		var ordenar = jQuery('.numatl').attr('data-sort-by');
+		$g.isotope({sortBy: ordenar});
 		
+
+
+
 		jQuery('#filters').on('click', '.button', function() {
-			
+
 			var filterValue = jQuery(this).attr('data-filter');
 			$g.isotope({
 
 				filter: filterValue
 
 			});
-			
+
 		});
 
 
 
 		jQuery('#sorts').on('click', '.button', function() {
-			var sortByValue = jQuery(this).attr('data-sort-by');
-
+			var sortByValue = jQuery('.grid-item').attr('data-filter');
+			
 			$g.isotope({
 				sortBy: sortByValue
 
@@ -106,7 +104,44 @@ $container = get_theme_mod('understrap_container_type');
 		});
 	});
 </script>
+<style>
+		.footer {
+			background-color: black;
+            color: white;
+            display: grid;
+            grid-template-columns: 40% auto auto;	}
+
+		.copy {
+			padding: 2%;
+			;
+		}
+
+		.contactar {
+			padding: 2%;
+        }
+        .contactar input,textarea{
+            margin: 2%;
+        }
+
+	</style>
 <?php wp_footer(); ?>
+<div class="footer">
+		<div class="copy">
+			<p>CopyRight</p>
+			<p>About us</p>
+			<p>Cookies</p>
+        </div>
+        <div class="About">
+            <p>Descripcion de pagina</p>
+        </div>
+		<div class="contactar">
+            <p>Contactar</p>
+           
+		</div>
+
+	</div>
+
+
 
 </body>
 

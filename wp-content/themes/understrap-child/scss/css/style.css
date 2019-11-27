@@ -8,13 +8,11 @@ body {
 	background-size: cover;
 }
 
-/*Sticky header*/
-#wrapper-navbar{
-	position: sticky;
-	top: 0;
-}
-/*Estructura de todas las paginas*/
 
+/*Estructura de todas las paginas*/
+.numatl{
+	position: absolute;
+}
 .navbar {
 	background-color: rgba(108, 97, 97, 0.7) !important;
 	font-size: 20px;
@@ -34,6 +32,11 @@ body {
 	background-color: transparent !important;
 
 
+}
+
+.grid-item img{
+	height:200px;
+	
 }
 
 
@@ -62,21 +65,24 @@ color: transparent;
 }
 
 
-
+.grid-item{
+	margin: 10px;
+}
 
 
 
 /*Botones*/
 
 
-.button,.buttonAll{
+.button{
 	margin: 10px;
-	background-color: #fc0 ;
+	background-color: rgb(60, 219, 68) ;
 	color: black;
-	border-color: #fc0;
+	border-color: rgb(60, 219, 68) ;
 	padding: 1%;
-	font-family: 'GeoBrandBold';
-	text-transform: uppercase;
+	font-family: 'italic';
+	border-radius: 10px;
+	
 }
 
 .button:hover{
