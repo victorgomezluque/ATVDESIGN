@@ -49,8 +49,6 @@ $container = get_theme_mod('understrap_container_type');
 
 
 <script>
-
-
 	jQuery.noConflict();
 
 	jQuery(document).ready(function() {
@@ -68,8 +66,10 @@ $container = get_theme_mod('understrap_container_type');
 			}
 		});
 		var ordenar = jQuery('.numatl').attr('data-sort-by');
-		$g.isotope({sortBy: ordenar});
-		
+		$g.isotope({
+			sortBy: ordenar
+		});
+
 
 
 
@@ -88,7 +88,7 @@ $container = get_theme_mod('understrap_container_type');
 
 		jQuery('#sorts').on('click', '.button', function() {
 			var sortByValue = jQuery('.grid-item').attr('data-filter');
-			
+
 			$g.isotope({
 				sortBy: sortByValue
 
@@ -105,41 +105,61 @@ $container = get_theme_mod('understrap_container_type');
 	});
 </script>
 <style>
-		.footer {
-			background-color: black;
-            color: white;
-            display: grid;
-            grid-template-columns: 40% auto auto;	}
+	.footer {
+		background-color: black;
+		color: white;
+		display: grid;
+		grid-template-columns: 40% auto auto;
+	}
 
-		.copy {
-			padding: 2%;
-			;
-		}
+	.copy {
+		padding: 2%;
+		;
+	}
 
-		.contactar {
-			padding: 2%;
-        }
-        .contactar input,textarea{
-            margin: 2%;
-        }
+	.contactar {
+		padding: 2%;
+	}
 
-	</style>
+	.contactar input,
+	textarea {
+		margin: 2%;
+	}
+
+	.contactar img {
+		width: 20px;
+		height: 20px;
+
+	}
+</style>
+<script>
+	function doMail() {
+		var email = "xyz@abc.com";
+		location.href = "mailto:" + email;
+	}
+</script>
 <?php wp_footer(); ?>
 <div class="footer">
-		<div class="copy">
-			<p>CopyRight</p>
-			<p>About us</p>
-			<p>Cookies</p>
-        </div>
-        <div class="About">
-            <p>Descripcion de pagina</p>
-        </div>
-		<div class="contactar">
-            <p>Contactar</p>
-           
-		</div>
+	<div class="copy">
+		<p>CopyRight</p>
+		<p>About us</p>
+		<p>Cookies</p>
+	</div>
+	<div class="About">
+		<h3>Pagina Oficial</h3><br>
+		<p>Esta pagina esta destinada a mis fotografias tal</p>
+	</div>
+	<div class="contactar">
+		<h3>Contactar</h3><br>
+		<a href="https://www.instagram.com/atvdesign/?hl=es"><img src="http://atvdesign.ddev.site/wp-content/uploads/2019/11/1b2ca367caa7eff8b45c09ec09b44c16-icono-de-instagram-logo-by-vexels.png" alt="Instagram"></a>
+		<a class="mailto" onclick="doMail();">
+			<p>atvdesign@gmail.com</p>
+		</a>
+
 
 	</div>
+
+</div>
 
 
 
