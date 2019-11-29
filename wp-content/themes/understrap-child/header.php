@@ -26,6 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');	body {
 	font-family: 'Roboto', sans-serif;
 }
+
 </style>
 
 <body <?php body_class(); ?>>

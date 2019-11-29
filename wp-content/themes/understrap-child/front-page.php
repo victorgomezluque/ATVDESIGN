@@ -35,7 +35,7 @@ $container = get_theme_mod('understrap_container_type');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		animation-name:  fideIN;
+		animation-name: fideIN;
 		animation-duration: 4s;
 
 	}
@@ -62,7 +62,7 @@ $container = get_theme_mod('understrap_container_type');
 		opacity: 1;
 	}
 
-	
+
 	@-webkit-keyframes cambio {
 		from {
 			color: white;
@@ -72,9 +72,11 @@ $container = get_theme_mod('understrap_container_type');
 			color: grey;
 		}
 	}
+
 	@-webkit-keyframes fideIN {
 		from {
-		opacity: 0;}
+			opacity: 0;
+		}
 
 		to {
 			opacity: 1;
@@ -97,10 +99,11 @@ $container = get_theme_mod('understrap_container_type');
 		font-size: 20px;
 	}
 
-	p:hover{
+	p:hover {
 		animation-name: cambio;
-  	animation-duration: 5s;
+		animation-duration: 5s;
 	}
+
 	.header {
 		display: grid;
 		grid-template-columns: auto auto auto;
