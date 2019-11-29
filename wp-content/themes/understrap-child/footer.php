@@ -131,6 +131,20 @@ $container = get_theme_mod('understrap_container_type');
 		height: 20px;
 
 	}
+
+	.copy,
+	.contactar,
+	.About {
+		margin-top: 5%;
+	}
+
+
+	@media only screen and (max-width: 600px) {
+
+		.footer {
+			display: block;
+		}
+	}
 </style>
 <script>
 	function doMail() {
@@ -141,19 +155,20 @@ $container = get_theme_mod('understrap_container_type');
 <?php wp_footer(); ?>
 <div class="footer">
 	<div class="copy">
+		<h3>Información</h3>
 		<p>CopyRight</p>
 		<p>About us</p>
 		<p>Cookies</p>
 	</div>
 	<div class="About">
-		<h3>Pagina Oficial</h3><br>
+		<h3>Pagina Oficial</h3>
 		<p>Esta pagina esta destinada a mis fotografias tal</p>
 	</div>
 	<div class="contactar">
-		<h3>Contactar</h3><br>
-		<a href="https://www.instagram.com/atvdesign/?hl=es"><img src="http://atvdesign.ddev.site/wp-content/uploads/2019/11/1b2ca367caa7eff8b45c09ec09b44c16-icono-de-instagram-logo-by-vexels.png" alt="Instagram"></a>
-		<a class="mailto" onclick="doMail();">
-			<p>atvdesign@gmail.com</p>
+		<h3>Contactar</h3>
+		<a href="https://www.instagram.com/atvdesign/?hl=es"><img src="http://atvdesign.ddev.site/wp-content/uploads/2019/11/1b2ca367caa7eff8b45c09ec09b44c16-icono-de-instagram-logo-by-vexels.png" alt="Instagram">atvdeisgn</img></a>
+		<br><a class="mailto" onclick="doMail();">
+			<img src="http://atvdesign.ddev.site/wp-content/uploads/2019/11/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" alt="mail">atvdesign@gmail.com</img>
 		</a>
 
 

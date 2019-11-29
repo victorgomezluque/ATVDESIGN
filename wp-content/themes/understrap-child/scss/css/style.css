@@ -58,4 +58,12 @@ body {
 
 
 
-/*Paginas todas las imagenes*/
+/*resposive*/
+@media only screen and (max-width: 600px) {
+
+	.grid-item img {
+		border: solid 3px white;
+		width: 150px;
+		height: 150px;
+	}
+}

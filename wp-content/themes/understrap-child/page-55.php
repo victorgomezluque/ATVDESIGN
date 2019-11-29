@@ -38,6 +38,8 @@ $container = get_theme_mod('understrap_container_type');
 			opacity: 1;
 		}
 	}
+
+	
 </style>
 
 
@@ -57,7 +59,42 @@ $container = get_theme_mod('understrap_container_type');
 
 					<div class="grid">
 
+					<?php
+						$args = array(
+							'post_status' => 'all',
+							'post_type' => 'foto',
+							'cat' => '6'
+
+						);
+
+
+
+
+						$category_posts = new WP_Query($args);
+
+
+						if ($category_posts->have_posts()) :
+							while ($category_posts->have_posts()) :
+								$category_posts->the_post();
+
+
+								?>
+
+
+
+								<div class='grid-item joya' data-filter="joya">
+									<p class="numatl" data-sort-by="numatl"> <?php echo rand(5, 15); ?></p>
+									<?php the_post_thumbnail('medium') ?>
+
+								</div>
+							<?php
+								endwhile;
+							else :
+								?>
+							Vaya, no hay entradas.
 						<?php
+						endif;
+						?><?php
 						$args = array(
 							'post_status' => 'all',
 							'post_type' => 'foto',
