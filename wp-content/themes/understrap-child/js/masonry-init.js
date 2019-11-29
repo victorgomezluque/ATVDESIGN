@@ -1,4 +1,4 @@
-jQuery(window).load(function () {
+/*jQuery(window).load(function () {
 	jQuery('.grid').masonry({
 		itemSelector: '.grid-item',
 		gutter: 10
@@ -6,3 +6,4 @@ jQuery(window).load(function () {
 
 	});
 })
+*/

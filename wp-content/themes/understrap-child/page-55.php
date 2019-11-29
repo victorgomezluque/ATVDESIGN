@@ -19,6 +19,13 @@ get_header();
 $container = get_theme_mod('understrap_container_type');
 
 ?>
+<style>
+body{
+	background-image: url(http://atvdesign.ddev.site/wp-content/uploads/2019/11/depositphotos_24779429-stock-photo-black-and-white-landscape.jpg);
+}
+
+
+</style>
 
 
 <div class="todas">
@@ -33,14 +40,7 @@ $container = get_theme_mod('understrap_container_type');
 
 				<main class="site-main" id="main">
 
-					<div id="filters" class="button-group filter-button-group">
-						<button class="button is-checked" data-filter="*">MOSTRAR TODO</button>
-						<button class="button" data-filter=".animal">ANIMALES</button>
-						<button class="button" data-filter=".comida">COMIDAS</button>
-						<button class="button" data-filter=".joya"> MODA</button>
-					</div>
 					
-
 					
 					<div class="grid">
 
@@ -48,7 +48,7 @@ $container = get_theme_mod('understrap_container_type');
 						$args = array(
 							'post_status' => 'all',
 							'post_type' => 'foto',
-							'cat' => '3'
+							'cat' => '6'
 
 						);
 
@@ -69,82 +69,6 @@ $container = get_theme_mod('understrap_container_type');
 
 								<div class='grid-item joya' data-filter="joya">
 									<p class="numatl" data-sort-by="numatl"> <?php echo rand(5, 15); ?></p>
-									<?php the_post_thumbnail('medium') ?>
-
-								</div>
-							<?php
-								endwhile;
-							else :
-								?>
-							Vaya, no hay entradas.
-						<?php
-						endif;
-						?>
-
-						<?php
-						$args = array(
-							'post_status' => 'all',
-							'post_type' => 'foto',
-							'cat' => '5'
-
-						);
-
-
-
-
-						$category_posts = new WP_Query($args);
-
-
-						if ($category_posts->have_posts()) :
-							while ($category_posts->have_posts()) :
-								$category_posts->the_post();
-
-
-								$slug = get_post_field('post_name');
-								?>
-
-
-								<div class='grid-item animal' data-filter="animal">
-								<p class="numatl" data-sort-by="numatl"> <?php echo rand(5, 15); ?></p>
-
-									<?php the_post_thumbnail('medium') ?>
-
-								</div>
-							<?php
-								endwhile;
-							else :
-								?>
-							Vaya, no hay entradas.
-						<?php
-						endif;
-						?>
-
-						<?php
-						$args = array(
-							'post_status' => 'all',
-							'post_type' => 'foto',
-							'cat' => '4'
-
-						);
-
-
-
-
-						$category_posts = new WP_Query($args);
-
-
-						if ($category_posts->have_posts()) :
-							while ($category_posts->have_posts()) :
-								$category_posts->the_post();
-
-
-								$slug = get_post_field('post_name');
-								?>
-
-
-								<div class='grid-item comida' data-filter="comida">
-								<p class="numatl" data-sort-by="numatl"> <?php echo rand(5, 15); ?></p>
-
 									<?php the_post_thumbnail('medium') ?>
 
 								</div>
