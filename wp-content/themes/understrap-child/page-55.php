@@ -20,11 +20,24 @@ $container = get_theme_mod('understrap_container_type');
 
 ?>
 <style>
-body{
-	background-image: url(http://atvdesign.ddev.site/wp-content/uploads/2019/11/depositphotos_24779429-stock-photo-black-and-white-landscape.jpg);
-}
+	body {
+		background-image: url(http://atvdesign.ddev.site/wp-content/uploads/2019/11/depositphotos_24779429-stock-photo-black-and-white-landscape.jpg);
+	}
 
+	.todas {
+		animation-name: fideIN;
+		animation-duration: 2s;
+	}
 
+	@-webkit-keyframes fideIN {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
 </style>
 
 
@@ -40,8 +53,8 @@ body{
 
 				<main class="site-main" id="main">
 
-					
-					
+
+
 					<div class="grid">
 
 						<?php
@@ -64,7 +77,7 @@ body{
 
 
 								?>
-								
+
 
 
 								<div class='grid-item joya' data-filter="joya">

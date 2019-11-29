@@ -20,9 +20,25 @@ $container = get_theme_mod('understrap_container_type');
 
 ?>
 <style>
-body{
-	background-image: url(http://atvdesign.ddev.site/wp-content/uploads/2019/11/47978540501_393134eae0_o.jpg);
-}
+	body {
+		background-image: url(http://atvdesign.ddev.site/wp-content/uploads/2019/11/47978540501_393134eae0_o.jpg);
+	}
+
+	.todas {
+
+		animation-name: fideIN;
+		animation-duration: 4s;
+	}
+
+	@-webkit-keyframes fideIN {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
 </style>
 
 
@@ -38,8 +54,8 @@ body{
 
 				<main class="site-main" id="main">
 
-					
-					
+
+
 					<div class="grid">
 
 						<?php
@@ -62,11 +78,12 @@ body{
 
 
 								?>
-								
+
 
 
 								<div class='grid-item joya' data-filter="joya">
 									<p class="numatl" data-sort-by="numatl"> <?php echo rand(5, 15); ?></p>
+
 									<?php the_post_thumbnail('medium') ?>
 
 								</div>
