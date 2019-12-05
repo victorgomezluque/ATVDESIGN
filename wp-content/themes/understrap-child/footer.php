@@ -18,6 +18,7 @@ $container = get_theme_mod('understrap_container_type');
 
 <div class="wrapper" id="wrapper-footer">
 
+
 	<div class="<?php echo esc_attr($container); ?>">
 
 		<div class="row">
@@ -148,7 +149,7 @@ $container = get_theme_mod('understrap_container_type');
 </style>
 <script>
 	function doMail() {
-		var email = "xyz@abc.com";
+		var email = "vgomez@ies-sabadell.cat";
 		location.href = "mailto:" + email;
 	}
 </script>

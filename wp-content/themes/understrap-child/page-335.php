@@ -19,6 +19,11 @@ get_header();
 $container = get_theme_mod('understrap_container_type');
 
 ?>
+<script type="text/javascript">
+
+
+
+</script>
 <style>
 	body {
 		background-image: url(http://atvdesign.ddev.site/wp-content/uploads/2019/11/47978540501_393134eae0_o.jpg);
@@ -30,7 +35,7 @@ $container = get_theme_mod('understrap_container_type');
 		animation-duration: 4s;
 	}
 
-	@-webkit-keyframes fideIN {
+	@keyframes fideIN {
 		from {
 			opacity: 0;
 		}
@@ -39,11 +44,16 @@ $container = get_theme_mod('understrap_container_type');
 			opacity: 1;
 		}
 	}
+	
 </style>
+
+
 
 
 <div class="todas">
 	<div class="wrapper" id="page-wrapper">
+
+	
 
 		<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 
